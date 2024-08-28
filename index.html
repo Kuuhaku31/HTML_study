@@ -5,12 +5,16 @@
 <html lang="zh-cn">
 
     <head>
+        <!-- 字符编码 -->
         <meta charset="UTF-8">
+        <!-- 网页标题 -->
         <meta name="viewport"
               content="width=device-width, initial-scale=1.0">
-        <title>我的第一个网页</title>
+        <title>Kuuhaku13</title>
+
+        <!-- 引入外部样式表 -->
         <link rel="stylesheet"
-              href="styles.css">
+              href="./styles/styles.css">
     </head>
 
     <body>
@@ -21,7 +25,7 @@
             <ul>
                 <li><a href="#home">首页</a></li>
                 <li><a href="#about">关于</a></li>
-                <li><a href="#contact">联系</a></li>
+                <li><a href="#game">游戏</a></li>
             </ul>
         </nav>
         <main>
@@ -29,36 +33,25 @@
                 <h2>首页</h2>
                 <p>这是我的第一个网页的首页。</p>
             </section>
+
             <section id="about">
                 <h2>关于</h2>
                 <p>这里是关于我的网页的一些信息。</p>
+                <!-- 显示图片 -->
+                <div id="image-container"></div>
+
             </section>
-            <section id="contact">
-                <h2>联系</h2>
-                <p>你可以通过以下方式联系我：</p>
-                <form id="contactForm">
-                    <label for="name">姓名:</label>
-                    <input type="text"
-                           id="name"
-                           name="name"
-                           required>
-                    <label for="email">电子邮件:</label>
-                    <input type="email"
-                           id="email"
-                           name="email"
-                           required>
-                    <label for="message">信息:</label>
-                    <textarea id="message"
-                              name="message"
-                              required></textarea>
-                    <button type="submit">提交</button>
-                </form>
+            <section id="game">
+                <h2>游戏</h2>
+                <p>点击下面的链接前往游戏。</p>
+                <a href="game/game.html">前往游戏</a>
+                <hr>
             </section>
         </main>
         <footer>
             <p>&copy; 2024.8.2 我的网页</p>
         </footer>
-        <script src="scripts.js"></script>
+        <script src="./scripts.js"></script>
     </body>
 
 </html>

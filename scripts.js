@@ -41,7 +41,7 @@ window.onload = () => {
         const paddedIndex = String(randomIndex).padStart(4, "0");
 
         // 尝试加载 .PNG 文件，如果失败则加载 .jpg 文件
-        img.src = `${imageBasePath}${paddedIndex}.PNG`;
+        img.src = `${imageBasePath}${paddedIndex}.png`;
         img.alt = `画像${randomIndex}`;
     }
 

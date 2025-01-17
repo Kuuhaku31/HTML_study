@@ -13,7 +13,21 @@
     <button type="button" onclick="displayDate()">显示日期</button>
     <button type="button" onclick="showText()">显示文本</button>
     <button type="button" onclick="reset()">重置</button>
+    <button type="button" onclick="DisplayUserInfo()">显示用户信息</button>
+    <!-- 分割线 -->
+    <hr />
+    <button type="button" onclick="user.SayHello()">问候</button>
     <p>点击下面的图片：</p>
     <img id="myimage" onclick="ChangeImage()" width="300" height="300" />
+    <hr />
+    <p>
+      时间<br />
+      <span id="timestamp"></span>
+      <br />
+      <span id="remain_second"></span>
+    </p>
+    <hr />
+    <p><div id = printout></div></p>
+    <a href="../02/index.html">下一章</a>
   </body>
 </html>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <meta charset="utf-8" />
@@ -7,7 +8,7 @@
     <style>
       #display_area {
         position: relative;
-        height: 600px;
+        height: 400px;
         background-color: lightblue;
       }
       .content {
@@ -20,7 +21,9 @@
     Hello Game!
     <hr />
     <p id="display_area"></p>
+    <p id="data_area"></p>
     <hr />
-    <button type="button" onclick="drawPlayer()">开始游戏</button>
+    <button type="button" onclick="PlayerToLeft()">左移动</button>
+    <button type="button" onclick="PlayerToRight()">右移动</button>
   </body>
 </html>

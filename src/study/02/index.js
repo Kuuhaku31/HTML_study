@@ -1,11 +1,79 @@
 // index.js
 
 // 位置，速度，加速度
-player_px = 0;
-player_py = 0;
+let player_px = 0;
+let player_py = 0;
 
-area_hight = 0;
-area_width = 0;
+let area_hight = 0;
+let area_width = 0;
+
+class Position {
+  constructor(px, py) {
+    this.px = px;
+    this.py = py;
+  }
+}
+
+class Velocity {
+  constructor(vx, vy) {
+    this.vx = vx;
+    this.vy = vy;
+  }
+}
+
+class Acceleration {
+  constructor(ax, ay) {
+    this.ax = ax;
+    this.ay = ay;
+  }
+}
+
+class Player {
+  constructor(label, pos = Position(0, 0)) {
+    this.#movement_positon = pos;
+    this.#player_label = label;
+  }
+
+  #movement_positon;
+  #movement_velocity = Velocity(0, 0);
+  #movement_acceleration = Acceleration(0, 0);
+
+  #mass = 1;
+
+  #player_label; // 玩家标签
+
+  get movement_positon() {
+    return this.#movement_positon;
+  }
+
+  get movement_velocity() {
+    return this.#movement_velocity;
+  }
+
+  get movement_acceleration() {
+    return this.#movement_acceleration;
+  }
+
+  get player_label() {
+    return this.#player_label;
+  }
+
+  OnUpdate(delta_time) {
+    this.#movement_positon.px += this.#movement_velocity.vx * delta_time;
+    this.#movement_positon.py += this.#movement_velocity.vy * delta_time;
+
+    this.#movement_velocity.vx += this.#movement_acceleration.ax * delta_time;
+    this.#movement_velocity.vy += this.#movement_acceleration.ay * delta_time;
+
+    this.#movement_acceleration.ax = 0;
+    this.#movement_acceleration.ay = 0;
+
+    if (this.#movement_positon.px < 0) this.#movement_positon.px = 0;
+    if (this.#movement_positon.py < 0) this.#movement_positon.py = 0;
+    if (this.#movement_positon.px > area_width) this.#movement_positon.px = area_width;
+    if (this.#movement_positon.py > area_hight) this.#movement_positon.py = area_hight;
+  }
+}
 
 // 画玩家
 function drawPlayer() {

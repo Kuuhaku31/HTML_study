@@ -2,54 +2,48 @@
 
 <!DOCTYPE html>
 <html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>game</title>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, initial-scale=1.0">
-        <title>game</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
 
-        <link rel="stylesheet"
-              href="../styles/styles.css">
+    <!-- 网页图标 -->
+    <link rel="icon" href="./mat/imgs/0012.png" type="image/x-icon" />
 
-        <!-- 网页图标 -->
-        <link rel="icon"
-              href="./mat/imgs/0012.png"
-              type="image/x-icon">
+    <style>
+      button#but {
+        display: block;
+        margin: 0 auto;
+      }
 
-        <style>
-            button#but {
-                display: block;
-                margin: 0 auto;
-            }
+      #image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-            #image-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    </style>
+  </head>
 
-            img {
-                max-width: 100%;
-                max-height: 100%;
-            }
-        </style>
-    </head>
-
-    <body>
-        <header>
-            <h1>游戏页面</h1>
-        </header>
-        <h2>title</h2>
-        <p>游戏说明……</p>
-        <hr>
-        <button id="but">STOP</button>
-        <br>
-        <div id="image-container"></div>
-        <br>
-        <hr>
-        <a href="../index.html">返回主页</a>
-        <script src="./game.js"></script>
-    </body>
-
+  <body>
+    <header>
+      <h1>游戏页面</h1>
+    </header>
+    <h2>title</h2>
+    <p>游戏说明……</p>
+    <hr />
+    <button id="but">STOP</button>
+    <br />
+    <div id="image-container"></div>
+    <br />
+    <hr />
+    <a href="../index.html">返回主页</a>
+    <script src="./game.js"></script>
+  </body>
 </html>

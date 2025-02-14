@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Audio Player</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <title>Audio Player</title>
-  <script src="index.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css" />
-</head>
+  <body>
+    Hello Game!
+    <hr />
+    <div id="wall_area" class="wall_area"></div>
+    <div id="display_area" class="main_area"></div>
+    <hr />
 
-<body>
-  Hello Game!
-  <hr />
-  <div id="wall_area" class="wall_area"></div>
-  <div id="display_area" class="main_area"></div>
-  <hr />
-
-  <div class="button-container">
-    <button type="button" onclick="movePlayerLeft()">左</button>
-    <div class="vertical-button-container">
-      <button type="button" onclick="movePlayerUp()">上</button>
-      <button type="button" onclick="movePlayerDown()">下</button>
+    <div class="buttons">
+      <button type="button" onclick="movePlayerLeft()">左</button>
+      <div class="up-down">
+        <button type="button" onclick="movePlayerUp()">上</button>
+        <button type="button" onclick="movePlayerDown()">下</button>
+      </div>
+      <button type="button" onclick="movePlayerRight()">右</button>
     </div>
-    <button type="button" onclick="movePlayerRight()">右</button>
-  </div>
 
-  <hr />
-  <a href="../../../index.html">返 回 主 页</a>
-</body>
-
+    <hr />
+    <a href="../../../index.html">返 回 主 页</a>
+  </body>
 </html>

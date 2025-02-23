@@ -26,7 +26,8 @@ const audiopath = "D:/KH_music";
 
 // 快速随机切换图像
 // 动态生成图像元素
-window.onload = () => {
+window.onload = () =>
+{
     const container = document.getElementById("image-container");
 
     // 创建一个 img 元素用于显示随机图像
@@ -36,12 +37,13 @@ window.onload = () => {
     container.appendChild(img);
 
     // 定时器函数，用于随机切换图像
-    function switchImage() {
+    function switchImage()
+    {
         const randomIndex = Math.floor(Math.random() * imageCount) + 1;
         const paddedIndex = String(randomIndex).padStart(4, "0");
 
         // 尝试加载 .PNG 文件，如果失败则加载 .jpg 文件
-        img.src = `${imageBasePath}${paddedIndex}.png`;
+        img.src = `${imageBasePath} ${paddedIndex}.png`;
         img.alt = `画像${randomIndex}`;
     }
 
@@ -51,5 +53,3 @@ window.onload = () => {
     // 初始调用一次以显示第一张图像
     switchImage();
 };
-
-//
